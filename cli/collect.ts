@@ -70,10 +70,17 @@ const getIdFromIngredient = (
   }
 };
 
+const allCosts = new Map<string, Map<string, number>>();
+
 /**
+ * Find out the cost of a recipe based on base ingredients
  * @param recipe Recipe to resolve the cost of
  */
-const costResolver = (recipe: recipe): Map<string, number> => {
+const costResolver = (
+  recipe: recipe,
+  subSteps = new Set<string>(),
+  rec = 1
+): Map<string, number> => {
   const cost = new Map<string, number>();
 
   if (!("result" in recipe)) {
@@ -86,12 +93,46 @@ const costResolver = (recipe: recipe): Map<string, number> => {
       ? recipe.result.count!
       : 1;
 
-  const resolveSubCost = (id: string, count = 1) => {
+  const resultIds = getIdFromIngredient(recipe.result);
+
+  for (const resultId of resultIds) {
+    subSteps.add(resultId);
+  }
+
+  const resolveSubCost = (id: string, count = 1): void => {
+    if (allCosts.has(id)) {
+      const subCost = allCosts.get(id)!;
+      for (const [subId, subCount] of subCost) {
+        const newCount = subCount * count;
+        if (cost.has(subId)) {
+          cost.set(subId, cost.get(subId)! + newCount);
+        } else {
+          cost.set(subId, newCount);
+        }
+      }
+      return;
+    }
+
     const subRecipe = allRecipes.find(
       (x) => "result" in x && getIdFromIngredient(x.result).includes(id)
-    );
-    if (subRecipe) {
-      for (const subRecipeKV of costResolver(subRecipe)) {
+    ) as undefined | (recipe & { result: ingredient | string });
+
+    if (subRecipe && rec < 10) {
+      const subRecipeIds = getIdFromIngredient(subRecipe.result);
+      for (const subId of subRecipeIds) {
+        if (subSteps.has(subId)) {
+          console.debug(`Recursion detected: ${id}`);
+          if (cost.has(id)) {
+            cost.set(id, cost.get(id)! + count);
+          } else {
+            cost.set(id, count);
+          }
+          return;
+        }
+      }
+
+      subSteps.add(id);
+      for (const subRecipeKV of costResolver(subRecipe, subSteps, rec + 1)) {
         if (cost.has(subRecipeKV[0])) {
           cost.set(
             subRecipeKV[0],
@@ -144,7 +185,6 @@ const costResolver = (recipe: recipe): Map<string, number> => {
 };
 
 // Calculate the cost of all recipes
-const allCosts = new Map<string, Map<string, number>>();
 for (const recipe of allRecipes) {
   if ("result" in recipe) {
     for (const id of getIdFromIngredient(recipe.result)) {
@@ -167,6 +207,6 @@ for (const cost of allCosts) {
   exportJsonCostObj[cost[0]] = Object.fromEntries(cost[1]);
 }
 Deno.writeTextFileSync(
-  "./costs.json",
+  "../src/costs.json",
   JSON.stringify(exportJsonCostObj, null, 2)
 );
