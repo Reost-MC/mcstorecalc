@@ -6,9 +6,9 @@ const createItem = (id: number, key: string, price: number): item => ({
   id,
   type: "tradable",
   item: {
-    "==": key,
+    "==": "org.bukkit.inventory.ItemStack",
     v: Math.random() * 100000000000000000,
-    type: "item",
+    type: key.split(":")[1].toUpperCase(),
   },
   "show-lore": true,
   "show-description": true,
