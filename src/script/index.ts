@@ -1,11 +1,13 @@
 import {
+  exportButtonEl,
   inputSectionEl,
   outputSectionEl,
   updateOutputButtonEl,
 } from "./elements";
 import { inputItemCard, outputItemCard } from "./itemCard";
 import costs from "../costs.json";
-import { getItemPrice } from "./itemPrices";
+import { getItemPrice, getItemPrices } from "./itemPrices";
+import { dtlTradersExport } from "./dtlTradersExport";
 
 const baseItems = new Set<string>();
 
@@ -24,7 +26,7 @@ const craftableItems = new Set<string>(
   Object.keys(costs).filter((key) => !baseItems.has(key))
 );
 
-const fillOutputSection = () => {
+const fillOutputSection = ((globalThis as any).fillOutputSection = () => {
   for (const key of craftableItems) {
     const value = getItemPrice(key);
     if (value === undefined) {
@@ -32,8 +34,16 @@ const fillOutputSection = () => {
     }
     outputSectionEl.appendChild(outputItemCard(key));
   }
-};
+});
 
-(globalThis as any).fillOutputSection = fillOutputSection;
+const exportYaml = ((globalThis as any).exportYaml = () => {
+  const yaml = dtlTradersExport(getItemPrices());
+  console.debug(yaml);
+  const outputWindow = window.open("about:blank", "_blank");
+  const temp = document.createElement("pre");
+  temp.innerText = yaml;
+  outputWindow.document.write(temp.outerHTML);
+});
 
 updateOutputButtonEl.addEventListener("click", fillOutputSection);
+exportButtonEl.addEventListener("click", exportYaml);
