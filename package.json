@@ -1,7 +1,5 @@
 {
   "name": "mcstorecalc",
-  "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/Reost-MC/mcstorecalc.git",
   "author": "Frank Mayer <frank.mayer1907@protonmail.com>",
   "license": "MIT",
