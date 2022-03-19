@@ -1,14 +1,16 @@
+type namespacedKey = `minecraft:${string}`;
+
 type baseIngredient =
   | {
-      type: string;
+      type: namespacedKey;
       count?: number;
     }
   | {
-      item: string;
+      item: namespacedKey;
       count?: number;
     }
   | {
-      tag: string;
+      tag: namespacedKey;
       count?: number;
     };
 
@@ -34,7 +36,7 @@ type shapelessRecipe = {
 type smeltingRecipe = {
   type: "minecraft:smelting";
   ingredient: ingredient;
-  result: string;
+  result: namespacedKey;
   experience: number;
   cookingtime: number;
 };
@@ -42,21 +44,21 @@ type smeltingRecipe = {
 type stonecuttingRecipe = {
   type: "minecraft:stonecutting";
   ingredient: ingredient;
-  result: string;
+  result: namespacedKey;
   count: number;
 };
 
 type campfireCookingRecipe = {
   type: "minecraft:campfire_cooking";
   ingredient: ingredient;
-  result: string;
+  result: namespacedKey;
   cookingtime: number;
 };
 
 type smokingRecipe = {
   type: "minecraft:smoking";
   ingredient: ingredient;
-  result: string;
+  result: namespacedKey;
   experience: number;
   cookingtime: number;
 };
@@ -65,7 +67,7 @@ type blastingRecipe = {
   type: "minecraft:blasting";
   group?: string;
   ingredient: ingredient;
-  result: string;
+  result: namespacedKey;
   experience: number;
   cookingtime: number;
 };

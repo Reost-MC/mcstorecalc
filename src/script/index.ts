@@ -6,7 +6,8 @@ import {
 } from "./elements";
 import { inputItemCard, outputItemCard } from "./itemCard";
 import costs from "../costs.json";
-import { getItemPrice } from "./itemPrices";
+import { getItemPrice, getItemPrices } from "./itemPrices";
+import { dtlTradersExport } from "./dtlTradersExport";
 
 const baseItems = new Set<string>();
 
@@ -35,7 +36,14 @@ const fillOutputSection = ((globalThis as any).fillOutputSection = () => {
   }
 });
 
-const exportYaml = ((globalThis as any).exportYaml = () => {});
+const exportYaml = ((globalThis as any).exportYaml = () => {
+  const yaml = dtlTradersExport(getItemPrices());
+  console.debug(yaml);
+  const outputWindow = window.open("about:blank", "_blank");
+  const temp = document.createElement("pre");
+  temp.innerText = yaml;
+  outputWindow.document.write(temp.outerHTML);
+});
 
 updateOutputButtonEl.addEventListener("click", fillOutputSection);
 exportButtonEl.addEventListener("click", exportYaml);

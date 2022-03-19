@@ -7,6 +7,8 @@ const baseItemPrices = new Map<string, number>();
 
 const itemPrices = new Map<string, number>();
 
+export const getItemPrices = () => itemPrices as ReadonlyMap<string, number>;
+
 const calculateItemPrices = () => {
   itemPrices.clear();
   for (const resultKey in costs) {
