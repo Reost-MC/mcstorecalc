@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@frank-mayer/magic": "^2.0.1",
-    "idb": "^7.0.1"
+    "idb": "^7.0.1",
+    "yaml": "^1.10.2"
   }
 }

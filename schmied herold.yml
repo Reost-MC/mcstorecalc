@@ -1,0 +1,94 @@
+schmied herold:
+  title: Schmied Herold
+  command: none
+  permission: none
+  default-shop: buy
+  buy-shop-enabled: true
+  sell-shop-enabled: true
+  trade-shop-enabled: true
+  logging-enabled: true
+  close-after-purchase: false
+  confirmation-window-enabled: false
+  pages:
+    page-0:
+      size: 54
+      page-name: Page 50621
+      page-permission: ""
+      buy-items:
+        item-0:
+          id: 3
+          type: tradable
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2865
+            type: POLISHED_GRANITE
+          show-lore: true
+          show-description: true
+          description: []
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 17/03/2022 18:34:09
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 17/03/2022 18:34:09
+          show-price: true
+          trade-price: 10.09
+          custom-input-enabled: true
+          stack-sale-enabled: true
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ""
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          permission: ""
+          logging-enabled: true
+          close-after-purchase: false
+      sell-items:
+        item-0:
+          id: 4
+          type: tradable
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2865
+            type: STONE_BRICKS
+          show-lore: true
+          show-description: true
+          description: []
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 17/03/2022 18:34:40
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 17/03/2022 18:34:40
+          show-price: true
+          trade-price: 9.5
+          custom-input-enabled: true
+          stack-sale-enabled: true
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ""
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          permission: ""
+          logging-enabled: true
+          close-after-purchase: false
