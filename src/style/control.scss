@@ -1,0 +1,26 @@
+#control {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  top: 8px;
+  left: 8px;
+  gap: 8px;
+  width: fit-content;
+  max-width: calc(100% - 16px);
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background: none;
+
+  > button {
+    background-color: $gray5;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 8px 14px;
+    outline: none !important;
+    cursor: pointer;
+  }
+}
