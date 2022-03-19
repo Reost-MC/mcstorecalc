@@ -63,12 +63,12 @@ export const dtlTradersExport = (
     page.size ??= pageSize;
 
     (page["sell-items"] ??= {})["item-" + itemCounter] = createItem(
-      itemCounter,
+      itemCounter * (pageCounter + 1),
       key,
       price * 0.8
     );
     (page["buy-items"] ??= {})["item-" + itemCounter] = createItem(
-      itemCounter,
+      itemCounter * (pageCounter + 1),
       key,
       price * 1.2
     );
