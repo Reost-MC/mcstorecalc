@@ -1,6 +1,7 @@
 import { capitalize } from "@frank-mayer/magic";
 import { stringify } from "yaml";
 import type { item, page } from "./dtlTraders";
+import { multiplicators } from "./elements";
 
 const createItem = (id: number, key: string, price: number): item => ({
   id,
@@ -65,12 +66,12 @@ export const dtlTradersExport = (
     (page["sell-items"] ??= {})["item-" + itemCounter] = createItem(
       itemCounter * (pageCounter + 1),
       key,
-      price * 0.8
+      price * Number(multiplicators.sell)
     );
     (page["buy-items"] ??= {})["item-" + itemCounter] = createItem(
       itemCounter * (pageCounter + 1),
       key,
-      price * 1.2
+      price * Number(multiplicators.buy)
     );
 
     pages[pageTitle] = page;
