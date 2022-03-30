@@ -2,6 +2,7 @@ import { capitalize } from "@frank-mayer/magic";
 import { stringify } from "yaml";
 import type { item, page } from "./dtlTraders";
 import { multiplicators } from "./elements";
+import { getIgnored } from "./ignoreList";
 
 const createItem = (id: number, key: string, price: number): item => ({
   id,
@@ -56,6 +57,10 @@ export const dtlTradersExport = (
   let itemCounter = 0;
 
   for (const [key, price] of itemPrices) {
+    if (getIgnored(key)) {
+      continue;
+    }
+
     const pageTitle = `page-${pageCounter}`;
     const page = (pages[pageTitle] ?? {}) as page;
 

@@ -1,4 +1,5 @@
 import { addDisposableEventListener } from "@frank-mayer/magic";
+import { getIgnored, setIgnored } from "./ignoreList";
 import {
   getBaseItemPriceFromDB,
   getItemPrice,
@@ -63,6 +64,17 @@ export const inputItemCard = (key: string) => {
 export const outputItemCard = (key: string) => {
   const el = itemCard(key);
   el.classList.add("output");
+
+  const enabledLabelEl = document.createElement("label");
+  enabledLabelEl.innerText = "Generate output";
+  const enabledEl = document.createElement("input");
+  enabledEl.type = "checkbox";
+  enabledEl.checked = !getIgnored(key);
+  addDisposableEventListener(enabledEl, "change", () => {
+    setIgnored(key, !enabledEl.checked);
+  });
+  enabledLabelEl.appendChild(enabledEl);
+  el.appendChild(enabledLabelEl);
 
   const valueLabelEl = document.createElement("label");
   valueLabelEl.innerText = "Price: ";
