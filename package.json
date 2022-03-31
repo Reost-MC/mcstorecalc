@@ -15,7 +15,7 @@
     }
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.3.2",
+    "@parcel/transformer-sass": "2.4.1",
     "autoprefixer": "^10.4.4",
     "buffer": "^6.0.3",
     "parcel": "^2.3.2",
