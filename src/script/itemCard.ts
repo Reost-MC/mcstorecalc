@@ -23,6 +23,7 @@ const itemCard = (id: string) => {
 export const inputItemCard = (key: string) => {
   const el = itemCard(key);
   el.classList.add("input");
+  el.dataset.query = key.replace(/[\s_]/g, "").toLowerCase();
 
   const valueLabelEl = document.createElement("label");
   valueLabelEl.innerText = "Price: ";

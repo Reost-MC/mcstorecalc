@@ -5,6 +5,10 @@ export const outputSectionEl = document.getElementById("output") as HTMLElement;
 export const exportButtonEl = document.getElementById(
   "export"
 ) as HTMLButtonElement;
+export const searchInputElement = document.getElementById(
+  "search"
+) as HTMLInputElement;
+
 export const multiplicators = bind(
   bind(
     {},

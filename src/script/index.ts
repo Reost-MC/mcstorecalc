@@ -1,8 +1,14 @@
-import { exportButtonEl, inputSectionEl, outputSectionEl } from "./elements";
+import {
+  exportButtonEl,
+  inputSectionEl,
+  outputSectionEl,
+  searchInputElement,
+} from "./elements";
 import { inputItemCard, outputItemCard } from "./itemCard";
 import costs from "../costs.json";
 import { getItemPrice, getItemPrices } from "./itemPrices";
 import { dtlTradersExport } from "./dtlTradersExport";
+import { retriggerableDelay } from "@frank-mayer/magic";
 
 const baseItems = new Set<string>();
 
@@ -21,7 +27,7 @@ const craftableItems = new Set<string>(
   Object.keys(costs).filter((key) => !baseItems.has(key))
 );
 
-const fillOutputSection = ((globalThis as any).fillOutputSection = () => {
+(globalThis as any).fillOutputSection = () => {
   for (const key of craftableItems) {
     const value = getItemPrice(key);
     if (value === undefined) {
@@ -29,6 +35,20 @@ const fillOutputSection = ((globalThis as any).fillOutputSection = () => {
     }
     outputSectionEl.appendChild(outputItemCard(key));
   }
+};
+
+searchInputElement.addEventListener("input", () => {
+  retriggerableDelay(() => {
+    const query = searchInputElement.value.replace(/[\s_]/g, "").toLowerCase();
+    const queryableItems = document.querySelectorAll("*[data-query]");
+    for (const el of queryableItems) {
+      if ((el as HTMLElement).dataset.query.includes(query)) {
+        el.classList.remove("hidden");
+      } else {
+        el.classList.add("hidden");
+      }
+    }
+  }, 250);
 });
 
 const exportYaml = ((globalThis as any).exportYaml = () => {
