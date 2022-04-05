@@ -1,6 +1,13 @@
 @import "./constants.scss";
 
+:root,
+body {
+  background-color: #000;
+}
+
 main {
+  grid-area: main;
+
   #input,
   #output {
     display: flex;
@@ -15,7 +22,6 @@ main {
   }
 
   padding: 64px 0 !important;
-  background-color: #000;
 }
 
 * {
@@ -32,3 +38,5 @@ main {
 
 @import "./item-card.scss";
 @import "./control.scss";
+@import "./ads.scss";
+@import "./style-desktop.scss";

@@ -9,21 +9,21 @@
     <title>MinecraftStoreCalculator</title>
   </head>
   <body>
+    <section id="control">
+      <button id="export">Export</button>
+      <label
+        >Sell Multiplikator <input type="number" id="multiply-sell" value="1.0"
+      /></label>
+      <label
+        >Buy Multiplikator <input type="number" id="multiply-buy" value="1.0"
+      /></label>
+    </section>
     <main>
-      <section id="control">
-        <button id="update-output">Update</button>
-        <button id="export">Export</button>
-        <label
-          >Sell Multiplikator
-          <input type="number" id="multiply-sell" value="1.0"
-        /></label>
-        <label
-          >Buy Multiplikator <input type="number" id="multiply-buy" value="1.0"
-        /></label>
-      </section>
       <section id="input"></section>
       <section id="output"></section>
     </main>
+    <div class="ad"></div>
+    <div class="ad"></div>
     <link rel="stylesheet" href="./style/style.scss" />
     <script type="module" src="./script/index.ts"></script>
   </body>

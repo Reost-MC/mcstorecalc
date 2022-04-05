@@ -1,26 +1,40 @@
 #control {
+  grid-area: control;
   display: block;
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 1;
-  top: 8px;
-  left: 8px;
+  padding: 8px 16px;
   gap: 8px;
-  width: fit-content;
-  max-width: calc(100% - 16px);
-  height: fit-content;
+  width: 100%;
+  height: max-content;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
   background: none;
+  backdrop-filter: blur(16px);
+  border-bottom: {
+    width: 1px;
+    style: solid;
+    color: rgba(white, 0.2);
+  }
+  align-items: center;
 
   > button {
-    background-color: $gray5;
     border: 1px solid black;
     border-radius: 8px;
     padding: 8px 14px;
     outline: none !important;
     cursor: pointer;
+
+    &:not(:hover) {
+      background-color: $gray5;
+    }
+
+    &:hover {
+      background-color: $gray6;
+    }
   }
 }

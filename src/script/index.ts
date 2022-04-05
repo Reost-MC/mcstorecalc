@@ -1,9 +1,4 @@
-import {
-  exportButtonEl,
-  inputSectionEl,
-  outputSectionEl,
-  updateOutputButtonEl,
-} from "./elements";
+import { exportButtonEl, inputSectionEl, outputSectionEl } from "./elements";
 import { inputItemCard, outputItemCard } from "./itemCard";
 import costs from "../costs.json";
 import { getItemPrice, getItemPrices } from "./itemPrices";
@@ -45,5 +40,4 @@ const exportYaml = ((globalThis as any).exportYaml = () => {
   outputWindow.document.write(temp.outerHTML);
 });
 
-updateOutputButtonEl.addEventListener("click", fillOutputSection);
 exportButtonEl.addEventListener("click", exportYaml);

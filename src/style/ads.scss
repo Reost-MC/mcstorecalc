@@ -1,0 +1,9 @@
+.ad {
+  &.start {
+    grid-area: ad-start;
+  }
+
+  &.end {
+    grid-area: ad-end;
+  }
+}
