@@ -20,6 +20,15 @@
 
     &.input {
       border-color: cadetblue;
+
+      &:focus-within {
+        border-color: rgb(109, 250, 255);
+        filter: drop-shadow(0 0 0.5rem cadetblue);
+
+        input {
+          filter: drop-shadow(0 0 0.25rem cadetblue);
+        }
+      }
     }
 
     &.output {
@@ -36,17 +45,7 @@
       height: fit-content;
 
       > input {
-        background: none;
-        border: 1px solid $gray5;
         width: fit-content;
-
-        &:focus {
-          border: {
-            width: 1px;
-            style: solid;
-            color: cadetblue;
-          }
-        }
       }
     }
 

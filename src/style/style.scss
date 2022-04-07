@@ -37,6 +37,23 @@ main {
   shape-rendering: geometricPrecision;
 }
 
+input {
+  outline: none !important;
+  background: none !important;
+  border: {
+    width: 1px !important;
+    style: solid !important;
+  }
+
+  &:focus {
+    border-color: cadetblue !important;
+  }
+
+  &:not(:focus) {
+    border-color: $gray5 !important;
+  }
+}
+
 @import "./item-card.scss";
 @import "./control.scss";
 @import "./ads.scss";
