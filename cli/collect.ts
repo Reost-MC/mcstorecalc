@@ -4,6 +4,22 @@ import { parse } from "https://deno.land/std@0.130.0/flags/mod.ts";
 import * as path from "https://deno.land/std@0.130.0/path/mod.ts";
 const args = parse(Deno.args);
 
+const translateMap = new Map<string, string>([
+  ["minecraft:stone_crafting_materials", "minecraft:cobblestone"],
+  ["minecraft:coalblock", "minecraft:coal_block"],
+  ["minecraft:acacia_logs", "minecraft:acacia_log"],
+  ["minecraft:birch_logs", "minecraft:birch_log"],
+  ["minecraft:dark_oak_logs", "minecraft:dark_oak_log"],
+  ["minecraft:jungle_logs", "minecraft:jungle_log"],
+  ["minecraft:oak_logs", "minecraft:oak_log"],
+  ["minecraft:spruce_logs", "minecraft:spruce_log"],
+  ["minecraft:logs_that_burn", "minecraft:oak_log"],
+  ["minecraft:logs", "minecraft:oak_log"],
+]);
+
+const translate = (x: string): string =>
+  translateMap.has(x) ? translateMap.get(x)! : x;
+
 // Get source location
 const location = args.loc ?? "./recipes";
 if (!Deno.statSync(location).isDirectory) {
@@ -123,9 +139,9 @@ const costResolver = (
         if (subSteps.has(subId)) {
           console.debug(`Recursion detected: ${id}`);
           if (cost.has(id)) {
-            cost.set(id, cost.get(id)! + count);
+            cost.set(translate(id), cost.get(id)! + count);
           } else {
-            cost.set(id, count);
+            cost.set(translate(id), count);
           }
           return;
         }
@@ -144,9 +160,9 @@ const costResolver = (
       }
     } else {
       if (cost.has(id)) {
-        cost.set(id, cost.get(id)! + count);
+        cost.set(translate(id), cost.get(id)! + count);
       } else {
-        cost.set(id, count);
+        cost.set(translate(id), count);
       }
     }
   };
@@ -178,7 +194,7 @@ const costResolver = (
   }
 
   for (const [id, count] of cost) {
-    cost.set(id, count / resultCount);
+    cost.set(translate(id), count / resultCount);
   }
 
   return cost;
@@ -192,7 +208,7 @@ for (const recipe of allRecipes) {
         allItemIds.add(id);
         const costMap = costResolver(recipe);
         if (costMap.size > 0) {
-          allCosts.set(id, costResolver(recipe));
+          allCosts.set(translate(id), costResolver(recipe));
         }
       }
     }

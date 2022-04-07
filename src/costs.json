@@ -1,39 +1,39 @@
 {
   "minecraft:acacia_boat": {
-    "minecraft:acacia_logs": 1.25
+    "minecraft:acacia_log": 1.25
   },
   "minecraft:acacia_button": {
-    "minecraft:acacia_logs": 0.25
+    "minecraft:acacia_log": 0.25
   },
   "minecraft:acacia_door": {
-    "minecraft:acacia_logs": 0.5
+    "minecraft:acacia_log": 0.5
   },
   "minecraft:acacia_fence": {
-    "minecraft:acacia_logs": 0.3333333333333333,
+    "minecraft:acacia_log": 0.3333333333333333,
     "minecraft:planks": 0.3333333333333333
   },
   "minecraft:acacia_fence_gate": {
     "minecraft:planks": 2,
-    "minecraft:acacia_logs": 0.5
+    "minecraft:acacia_log": 0.5
   },
   "minecraft:acacia_planks": {
-    "minecraft:acacia_logs": 0.25
+    "minecraft:acacia_log": 0.25
   },
   "minecraft:acacia_pressure_plate": {
-    "minecraft:acacia_logs": 0.5
+    "minecraft:acacia_log": 0.5
   },
   "minecraft:acacia_sign": {
-    "minecraft:acacia_logs": 0.5,
+    "minecraft:acacia_log": 0.5,
     "minecraft:planks": 0.16666666666666666
   },
   "minecraft:acacia_slab": {
-    "minecraft:acacia_logs": 0.125
+    "minecraft:acacia_log": 0.125
   },
   "minecraft:acacia_stairs": {
-    "minecraft:acacia_logs": 0.375
+    "minecraft:acacia_log": 0.375
   },
   "minecraft:acacia_trapdoor": {
-    "minecraft:acacia_logs": 0.75
+    "minecraft:acacia_log": 0.75
   },
   "minecraft:acacia_wood": {
     "minecraft:acacia_log": 1.3333333333333333
@@ -95,40 +95,40 @@
     "minecraft:beetroot": 6
   },
   "minecraft:birch_boat": {
-    "minecraft:birch_logs": 1.25
+    "minecraft:birch_log": 1.25
   },
   "minecraft:birch_button": {
-    "minecraft:birch_logs": 0.25
+    "minecraft:birch_log": 0.25
   },
   "minecraft:birch_door": {
-    "minecraft:birch_logs": 0.5
+    "minecraft:birch_log": 0.5
   },
   "minecraft:birch_fence": {
-    "minecraft:birch_logs": 0.3333333333333333,
+    "minecraft:birch_log": 0.3333333333333333,
     "minecraft:planks": 0.3333333333333333
   },
   "minecraft:birch_fence_gate": {
     "minecraft:planks": 2,
-    "minecraft:birch_logs": 0.5
+    "minecraft:birch_log": 0.5
   },
   "minecraft:birch_planks": {
-    "minecraft:birch_logs": 0.25
+    "minecraft:birch_log": 0.25
   },
   "minecraft:birch_pressure_plate": {
-    "minecraft:birch_logs": 0.5
+    "minecraft:birch_log": 0.5
   },
   "minecraft:birch_sign": {
-    "minecraft:birch_logs": 0.5,
+    "minecraft:birch_log": 0.5,
     "minecraft:planks": 0.16666666666666666
   },
   "minecraft:birch_slab": {
-    "minecraft:birch_logs": 0.125
+    "minecraft:birch_log": 0.125
   },
   "minecraft:birch_stairs": {
-    "minecraft:birch_logs": 0.375
+    "minecraft:birch_log": 0.375
   },
   "minecraft:birch_trapdoor": {
-    "minecraft:birch_logs": 0.75
+    "minecraft:birch_log": 0.75
   },
   "minecraft:birch_wood": {
     "minecraft:birch_log": 1.3333333333333333
@@ -190,8 +190,7 @@
     "minecraft:string": 4
   },
   "minecraft:blast_furnace": {
-    "minecraft:cobblestone": 3,
-    "minecraft:stone_crafting_materials": 8
+    "minecraft:cobblestone": 11
   },
   "minecraft:blaze_powder": {
     "minecraft:blaze_rod": 0.5
@@ -275,7 +274,7 @@
   },
   "minecraft:brewing_stand": {
     "minecraft:blaze_rod": 1,
-    "minecraft:stone_crafting_materials": 3
+    "minecraft:cobblestone": 3
   },
   "minecraft:brick": {
     "minecraft:clay_ball": 1
@@ -348,7 +347,7 @@
     "minecraft:egg": 1
   },
   "minecraft:campfire": {
-    "minecraft:logs": 3,
+    "minecraft:oak_log": 3,
     "minecraft:planks": 1.5,
     "minecraft:coals": 1
   },
@@ -369,7 +368,7 @@
     "minecraft:iron_ingot": 0.2222222222222222
   },
   "minecraft:charcoal": {
-    "minecraft:logs_that_burn": 1
+    "minecraft:oak_log": 1
   },
   "minecraft:chest": {
     "minecraft:planks": 8
@@ -623,40 +622,40 @@
     "minecraft:string": 4
   },
   "minecraft:dark_oak_boat": {
-    "minecraft:dark_oak_logs": 1.25
+    "minecraft:dark_oak_log": 1.25
   },
   "minecraft:dark_oak_button": {
-    "minecraft:dark_oak_logs": 0.25
+    "minecraft:dark_oak_log": 0.25
   },
   "minecraft:dark_oak_door": {
-    "minecraft:dark_oak_logs": 0.5
+    "minecraft:dark_oak_log": 0.5
   },
   "minecraft:dark_oak_fence": {
-    "minecraft:dark_oak_logs": 0.3333333333333333,
+    "minecraft:dark_oak_log": 0.3333333333333333,
     "minecraft:planks": 0.3333333333333333
   },
   "minecraft:dark_oak_fence_gate": {
     "minecraft:planks": 2,
-    "minecraft:dark_oak_logs": 0.5
+    "minecraft:dark_oak_log": 0.5
   },
   "minecraft:dark_oak_planks": {
-    "minecraft:dark_oak_logs": 0.25
+    "minecraft:dark_oak_log": 0.25
   },
   "minecraft:dark_oak_pressure_plate": {
-    "minecraft:dark_oak_logs": 0.5
+    "minecraft:dark_oak_log": 0.5
   },
   "minecraft:dark_oak_sign": {
-    "minecraft:dark_oak_logs": 0.5,
+    "minecraft:dark_oak_log": 0.5,
     "minecraft:planks": 0.16666666666666666
   },
   "minecraft:dark_oak_slab": {
-    "minecraft:dark_oak_logs": 0.125
+    "minecraft:dark_oak_log": 0.125
   },
   "minecraft:dark_oak_stairs": {
-    "minecraft:dark_oak_logs": 0.375
+    "minecraft:dark_oak_log": 0.375
   },
   "minecraft:dark_oak_trapdoor": {
-    "minecraft:dark_oak_logs": 0.75
+    "minecraft:dark_oak_log": 0.75
   },
   "minecraft:dark_oak_wood": {
     "minecraft:dark_oak_log": 1.3333333333333333
@@ -870,10 +869,10 @@
     "minecraft:clay_ball": 3
   },
   "minecraft:furnace": {
-    "minecraft:stone_crafting_materials": 8
+    "minecraft:cobblestone": 8
   },
   "minecraft:furnace_minecart": {
-    "minecraft:stone_crafting_materials": 8
+    "minecraft:cobblestone": 8
   },
   "minecraft:glass": {
     "minecraft:sand": 1
@@ -1111,40 +1110,40 @@
     "minecraft:diamond": 1
   },
   "minecraft:jungle_boat": {
-    "minecraft:jungle_logs": 1.25
+    "minecraft:jungle_log": 1.25
   },
   "minecraft:jungle_button": {
-    "minecraft:jungle_logs": 0.25
+    "minecraft:jungle_log": 0.25
   },
   "minecraft:jungle_door": {
-    "minecraft:jungle_logs": 0.5
+    "minecraft:jungle_log": 0.5
   },
   "minecraft:jungle_fence": {
-    "minecraft:jungle_logs": 0.3333333333333333,
+    "minecraft:jungle_log": 0.3333333333333333,
     "minecraft:planks": 0.3333333333333333
   },
   "minecraft:jungle_fence_gate": {
     "minecraft:planks": 2,
-    "minecraft:jungle_logs": 0.5
+    "minecraft:jungle_log": 0.5
   },
   "minecraft:jungle_planks": {
-    "minecraft:jungle_logs": 0.25
+    "minecraft:jungle_log": 0.25
   },
   "minecraft:jungle_pressure_plate": {
-    "minecraft:jungle_logs": 0.5
+    "minecraft:jungle_log": 0.5
   },
   "minecraft:jungle_sign": {
-    "minecraft:jungle_logs": 0.5,
+    "minecraft:jungle_log": 0.5,
     "minecraft:planks": 0.16666666666666666
   },
   "minecraft:jungle_slab": {
-    "minecraft:jungle_logs": 0.125
+    "minecraft:jungle_log": 0.125
   },
   "minecraft:jungle_stairs": {
-    "minecraft:jungle_logs": 0.375
+    "minecraft:jungle_log": 0.375
   },
   "minecraft:jungle_trapdoor": {
-    "minecraft:jungle_logs": 0.75
+    "minecraft:jungle_log": 0.75
   },
   "minecraft:jungle_wood": {
     "minecraft:jungle_log": 1.3333333333333333
@@ -1515,40 +1514,40 @@
     "minecraft:redstone": 1
   },
   "minecraft:oak_boat": {
-    "minecraft:oak_logs": 1.25
+    "minecraft:oak_log": 1.25
   },
   "minecraft:oak_button": {
-    "minecraft:oak_logs": 0.25
+    "minecraft:oak_log": 0.25
   },
   "minecraft:oak_door": {
-    "minecraft:oak_logs": 0.5
+    "minecraft:oak_log": 0.5
   },
   "minecraft:oak_fence": {
-    "minecraft:oak_logs": 0.3333333333333333,
+    "minecraft:oak_log": 0.3333333333333333,
     "minecraft:planks": 0.3333333333333333
   },
   "minecraft:oak_fence_gate": {
     "minecraft:planks": 2,
-    "minecraft:oak_logs": 0.5
+    "minecraft:oak_log": 0.5
   },
   "minecraft:oak_planks": {
-    "minecraft:oak_logs": 0.25
+    "minecraft:oak_log": 0.25
   },
   "minecraft:oak_pressure_plate": {
-    "minecraft:oak_logs": 0.5
+    "minecraft:oak_log": 0.5
   },
   "minecraft:oak_sign": {
-    "minecraft:oak_logs": 0.5,
+    "minecraft:oak_log": 0.5,
     "minecraft:planks": 0.16666666666666666
   },
   "minecraft:oak_slab": {
-    "minecraft:oak_logs": 0.125
+    "minecraft:oak_log": 0.125
   },
   "minecraft:oak_stairs": {
-    "minecraft:oak_logs": 0.375
+    "minecraft:oak_log": 0.375
   },
   "minecraft:oak_trapdoor": {
-    "minecraft:oak_logs": 0.75
+    "minecraft:oak_log": 0.75
   },
   "minecraft:oak_wood": {
     "minecraft:oak_log": 1.3333333333333333
@@ -2057,8 +2056,8 @@
     "minecraft:iron_ingot": 2
   },
   "minecraft:smoker": {
-    "minecraft:logs": 4,
-    "minecraft:stone_crafting_materials": 8
+    "minecraft:oak_log": 4,
+    "minecraft:cobblestone": 8
   },
   "minecraft:smooth_basalt": {
     "minecraft:basalt": 1
@@ -2103,7 +2102,7 @@
     "minecraft:snowball": 4
   },
   "minecraft:soul_campfire": {
-    "minecraft:logs": 3,
+    "minecraft:oak_log": 3,
     "minecraft:planks": 1.5,
     "minecraft:soul_fire_base_blocks": 1
   },
@@ -2128,40 +2127,40 @@
     "minecraft:wet_sponge": 1
   },
   "minecraft:spruce_boat": {
-    "minecraft:spruce_logs": 1.25
+    "minecraft:spruce_log": 1.25
   },
   "minecraft:spruce_button": {
-    "minecraft:spruce_logs": 0.25
+    "minecraft:spruce_log": 0.25
   },
   "minecraft:spruce_door": {
-    "minecraft:spruce_logs": 0.5
+    "minecraft:spruce_log": 0.5
   },
   "minecraft:spruce_fence": {
-    "minecraft:spruce_logs": 0.3333333333333333,
+    "minecraft:spruce_log": 0.3333333333333333,
     "minecraft:planks": 0.3333333333333333
   },
   "minecraft:spruce_fence_gate": {
     "minecraft:planks": 2,
-    "minecraft:spruce_logs": 0.5
+    "minecraft:spruce_log": 0.5
   },
   "minecraft:spruce_planks": {
-    "minecraft:spruce_logs": 0.25
+    "minecraft:spruce_log": 0.25
   },
   "minecraft:spruce_pressure_plate": {
-    "minecraft:spruce_logs": 0.5
+    "minecraft:spruce_log": 0.5
   },
   "minecraft:spruce_sign": {
-    "minecraft:spruce_logs": 0.5,
+    "minecraft:spruce_log": 0.5,
     "minecraft:planks": 0.16666666666666666
   },
   "minecraft:spruce_slab": {
-    "minecraft:spruce_logs": 0.125
+    "minecraft:spruce_log": 0.125
   },
   "minecraft:spruce_stairs": {
-    "minecraft:spruce_logs": 0.375
+    "minecraft:spruce_log": 0.375
   },
   "minecraft:spruce_trapdoor": {
-    "minecraft:spruce_logs": 0.75
+    "minecraft:spruce_log": 0.75
   },
   "minecraft:spruce_wood": {
     "minecraft:spruce_log": 1.3333333333333333
