@@ -40,7 +40,7 @@ export const inputItemCard = (key: string) => {
     }
   });
 
-  valueInputEl.addEventListener("change", () => {
+  addDisposableEventListener(valueInputEl, "change", () => {
     const value = Number(valueInputEl.value);
     if (isNaN(value) || value < 0 || valueInputEl.value.trim() === "") {
       valueInputEl.value = "";

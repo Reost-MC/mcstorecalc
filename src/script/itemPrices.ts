@@ -32,6 +32,7 @@ const calculateItemPrices = () => {
 const dataChanged = () => {
   retriggerableDelay(() => {
     calculateItemPrices();
+    retriggerableDelay(globalThis.fillOutputSection, 1000);
   }, 1000);
 };
 
