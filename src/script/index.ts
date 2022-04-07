@@ -8,7 +8,7 @@ import { inputItemCard, outputItemCard } from "./itemCard";
 import costs from "../costs.json";
 import { getItemPrice, getItemPrices } from "./itemPrices";
 import { dtlTradersExport } from "./dtlTradersExport";
-import { retriggerableDelay } from "@frank-mayer/magic";
+import { disposeNode, retriggerableDelay } from "@frank-mayer/magic";
 
 const baseItems = new Set<string>();
 
@@ -28,6 +28,10 @@ const craftableItems = new Set<string>(
 );
 
 (globalThis as any).fillOutputSection = () => {
+  for (const el of Array.from(outputSectionEl.children)) {
+    disposeNode(el);
+  }
+
   for (const key of craftableItems) {
     const value = getItemPrice(key);
     if (value === undefined) {

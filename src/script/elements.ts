@@ -9,13 +9,16 @@ export const searchInputElement = document.getElementById(
   "search"
 ) as HTMLInputElement;
 
+export const multiplySellInputEl = document.getElementById(
+  "multiply-sell"
+) as HTMLInputElement;
+export const multiplyBuyInputEl = document.getElementById(
+  "multiply-buy"
+) as HTMLInputElement;
+
 export const multiplicators = bind(
-  bind(
-    {},
-    document.getElementById("multiply-sell") as HTMLInputElement,
-    "sell"
-  ),
-  document.getElementById("multiply-buy") as HTMLInputElement,
+  bind({}, multiplySellInputEl, "sell"),
+  multiplyBuyInputEl,
   "buy"
 );
 

@@ -4,7 +4,7 @@
   "author": "Frank Mayer <frank.mayer1907@protonmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel serve 'src/index.html'",
+    "dev": "parcel serve src/index.html",
     "clean": "rm -rf ./.parcel-cache && rm -rf ./dist",
     "build": "parcel build 'src/index.html' --no-source-maps --no-cache --public-url 'https://mcstorecalc.web.app/'"
   },

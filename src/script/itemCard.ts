@@ -1,4 +1,5 @@
 import { addDisposableEventListener } from "@frank-mayer/magic";
+import { multiplicators } from "./elements";
 import { getIgnored, setIgnored } from "./ignoreList";
 import {
   getBaseItemPriceFromDB,
@@ -84,7 +85,21 @@ export const outputItemCard = (key: string) => {
   valueOutputEl.classList.add("value");
   valueOutputEl.innerText = getItemPrice(key).toFixed(2) || "N/A";
 
+  const valueOutputSellEl = document.createElement("span");
+  valueOutputSellEl.classList.add("value");
+  valueOutputSellEl.classList.add("sell");
+  valueOutputSellEl.innerText =
+    (getItemPrice(key) * Number(multiplicators.sell)).toFixed(2) || "N/A";
+
+  const valueOutputBuyEl = document.createElement("span");
+  valueOutputBuyEl.classList.add("value");
+  valueOutputBuyEl.classList.add("buy");
+  valueOutputBuyEl.innerText =
+    (getItemPrice(key) * Number(multiplicators.buy)).toFixed(2) || "N/A";
+
   valueLabelEl.appendChild(valueOutputEl);
+  valueLabelEl.appendChild(valueOutputSellEl);
+  valueLabelEl.appendChild(valueOutputBuyEl);
   el.appendChild(valueLabelEl);
 
   return el;

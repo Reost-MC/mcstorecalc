@@ -39,6 +39,43 @@
         background: none;
         border: 1px solid $gray5;
         width: fit-content;
+
+        &:focus {
+          border: {
+            width: 1px;
+            style: solid;
+            color: cadetblue;
+          }
+        }
+      }
+    }
+
+    span.value {
+      display: inline-block;
+
+      &:not(.sell):not(.buy) {
+        color: $gray4;
+        font-style: italic;
+
+        &::after {
+          content: "(Base)";
+        }
+      }
+
+      &.sell {
+        color: darkred;
+
+        &::after {
+          content: "(Sell)";
+        }
+      }
+
+      &.buy {
+        color: cadetblue;
+
+        &::after {
+          content: "(Buy)";
+        }
       }
     }
   }
